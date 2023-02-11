@@ -38,6 +38,20 @@ function Navbar() {
             </button>
           </div>
         </form>
+        <div className="text-xl p-3 bg-zinc-900 roundede-full">
+          <TiMicrophone />
+        </div>
+        <div className="flex gap-5 items-center text-xl">
+          <BsCameraVideo/>
+          <IoAppsSharp />
+          <div className="relative">
+            <BsBell/>
+            <span className="absolute bottom-2 left-2 text-xs bg-red-600 rounded-full px-q">
+              99+
+            </span>
+          </div>
+          <img src="" alt="" />
+        </div>
       </div>
     </div>
   );
