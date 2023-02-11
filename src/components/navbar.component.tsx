@@ -50,6 +50,7 @@ function Navbar() {
               99+
             </span>
           </div>
+          {/* 28:55 */}
           <img src="" alt="" />
         </div>
       </div>
