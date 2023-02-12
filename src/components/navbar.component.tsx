@@ -42,16 +42,19 @@ function Navbar() {
           <TiMicrophone />
         </div>
         <div className="flex gap-5 items-center text-xl">
-          <BsCameraVideo/>
+          <BsCameraVideo />
           <IoAppsSharp />
           <div className="relative">
-            <BsBell/>
+            <BsBell />
             <span className="absolute bottom-2 left-2 text-xs bg-red-600 rounded-full px-q">
               99+
             </span>
           </div>
-          {/* 28:55 */}
-          <img src="" alt="" />
+          <img
+            src="https://yt3.ggpht.com/yti/AHXOFjXaHs31Pjr151DdtNp0MoGnb0l6fRC0ITzWlwJ2WsU=s88-c-k-c0x00ffffff-no-rj-mo"
+            alt="profile"
+            className="w-9 h-9 rounded-full"
+          />
         </div>
       </div>
     </div>
