@@ -14,11 +14,15 @@ const initialState: InitialState = {
 const YoutubeSlice = createSlice({
   name: "youtubeApp",
   initialState,
-  reducers: {},
-  extraReducers: (builder => {
-    builder.addCase(getHomePageVideos.fulfilled,(state, action) => {
-      // state.videos=action.payload.parsedData;
-      // state.nextPageToken = action.payload.nextPageToken;
+  reducers: {
+    changeSearchTerm: (state, action: PayloadAction<string>) => {
+      state.searchTerm = action.payload;
+    },
+  },
+  extraReducers: ((builder) => {
+    builder.addCase(getHomePageVideos.fulfilled, (state, action) => {
+      state.videos = action.payload.parsedData;
+      state.nextPageToken = action.payload.nextPageToken;
     })
   }),
 });

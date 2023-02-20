@@ -8,6 +8,7 @@ import { YOUTUBE_API_URL } from "./constants";
 import { HomePageVideos } from "../Types";
 
 const API_KEY = process.env.REACT_APP_YOTUBE_DATA_API_KEY;
+const MY_API_KEY="AIzaSyA-epT3ZNOdzFHEnpcurAyMCVZMQlOImVM";
 
 export const parseData = async (items: any[]) => {
   try {
@@ -25,7 +26,7 @@ export const parseData = async (items: any[]) => {
     } = await axios.get(
       `${YOUTUBE_API_URL}/channels?part=snippet,contentDetails&id=${channelIds.join(
         ","
-      )}&key=${API_KEY}`
+      )}&key=${MY_API_KEY}`
     );
 
     const parsedChannelsData: { id: string; image: string }[] = [];
@@ -45,7 +46,7 @@ export const parseData = async (items: any[]) => {
     } = await axios.get(
       `${YOUTUBE_API_URL}/videos?part=contentDetails,statistics&id=${videoIds.join(
         ","
-      )}&key=${API_KEY}`
+      )}&key=${MY_API_KEY}`
     );
     const parsedData: HomePageVideos[] = [];
     items.forEach(
