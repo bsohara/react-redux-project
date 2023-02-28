@@ -14,7 +14,7 @@ export const getHomePageVideos = createAsyncThunk(
     const {
       youtubeApp: { nextPageToken: nextPageTokenFromState, videos },
     } = getState() as RootState;
-    const { data: { items, nextPageToken } } = await axios.get(`${YOUTUBE_API_URL}/search?maxResults=20&q="react redux api project"&key=${MY_API_KEY}&part=snippet&type=video`);
+    const { data: { items, nextPageToken } } = await axios.get(`${YOUTUBE_API_URL}/search?maxResults=20&q="janela da rua"&key=${MY_API_KEY}&part=snippet&type=video`);
 
     console.log(items);
     const parsedData: HomePageVideos[] = await parseData(items);
